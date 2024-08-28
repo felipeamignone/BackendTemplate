@@ -3,12 +3,13 @@ import swaggerUi from "swagger-ui-express";
 import swaggerOutput from "../swagger_output.json";
 
 import apiRouter from "./routes";
-import { dispatchQuery } from "./db";
+import cookieParser from "cookie-parser";
 
 const app = express();
 const PORT = 5000;
 
 app.use(express.json());
+app.use(cookieParser());
 
 app.use("/", apiRouter);
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerOutput));
