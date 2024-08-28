@@ -9,6 +9,7 @@
 - Swagger Autogen
 - mysql2
 - nodemon
+- JWT
 
 ## Start Project
 ### Create a .env file with these variables for mysql connection.
